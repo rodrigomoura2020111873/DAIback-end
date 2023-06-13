@@ -9,6 +9,8 @@ const manutencaoRoutes = require("./routes/manutencao");
 const recolhaRoutes = require("./routes/recolha");
 const { schema } = require("./schemas/basic-schema");
 const { createHandler } = require("graphql-http/lib/use/express");
+const cors = require('cors');
+
 
 require("dotenv").config();
 
@@ -20,6 +22,8 @@ mongoose
   .catch((err) => console.log(err));
 
 const app = express();
+
+app.use(cors());
 
 app.use(bodyParser.json());
 
