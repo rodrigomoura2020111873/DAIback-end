@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 // Create schema for balde
 const BaldeSchema = new Schema({
-  conselho: {
+  concelho: {
     type: String,
-    required: [true, "o campo 'Conselho' é obrigatorio"],
+    required: [true, "o campo 'Concelho' é obrigatorio"],
   },
   freguesia: {
     type: String,
